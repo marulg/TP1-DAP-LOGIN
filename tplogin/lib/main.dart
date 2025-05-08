@@ -19,11 +19,12 @@ TextEditingController textoContra = TextEditingController();
 
 String usuarioPuesto = "NoInput";
 String contraPuesta = "NoInput";
-String resultado = "";
-Color colorRespuesta = Colors.white;
 
 String username = "marulg";
 String password = "meca2025";
+ 
+Color colorRespuesta = Colors.white; // para poder modificar el color mas facil segun q respuesta te salga
+String resultado = ""; // lo mismo pero con el texto q salga
 
 bool ocultarContra = true; // para ocultar y mostrar la contraseña
 
@@ -86,11 +87,11 @@ Widget build(BuildContext context) {
                decoration: InputDecoration(
                  suffixIcon: IconButton( // el ojito que oculta/muestra
                    icon: Icon(
-                     ocultarContra ? Icons.visibility_off : Icons.visibility,
+                     ocultarContra ? Icons.visibility_off : Icons.visibility, // si esta en true pone el icono del ojo con la raya (oculto), si no pone el normal
                    ),
                    onPressed: () {
                      setState(() {
-                       ocultarContra = !ocultarContra;
+                       ocultarContra = !ocultarContra; // invierte el valor de ocultarContra al tocar botón (si estaba en true pasa a false y viceversa)
                      });
                    },
                  ),
@@ -98,10 +99,10 @@ Widget build(BuildContext context) {
              ),
            ),
            const SizedBox(height: 30),
-           ElevatedButton(onPressed: enviar, child: const Text("LOG IN")),
+           ElevatedButton(onPressed: enviar, child: const Text("LOG IN")), // cuando se toca el botón llama a la función q piensa la respuesta
            const SizedBox(height: 20),
            Text(
-             resultado,
+             resultado, // despues de pensar la respuesta, esta se muestra
              style: TextStyle(fontSize: 18, color: colorRespuesta),
            ),
          ],
