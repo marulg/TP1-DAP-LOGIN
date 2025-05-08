@@ -102,7 +102,7 @@ Widget build(BuildContext context) {
            ElevatedButton(onPressed: enviar, child: const Text("LOG IN")), // cuando se toca el botón llama a la función q piensa la respuesta
            const SizedBox(height: 20),
            Text(
-             resultado, // despues de pensar la respuesta, esta se muestra
+             resultado, // el texto se queda en blanco hasta que la funcion "enviar" lo cambie
              style: TextStyle(fontSize: 18, color: colorRespuesta),
            ),
          ],
