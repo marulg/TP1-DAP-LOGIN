@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+// Alumna: Marina G
 
 void main() {
 runApp(const MainApp());
